@@ -74,7 +74,7 @@ function yaogua(){
     $.getJSON("data.json",laterProcess);
 
     function laterProcess(data){
-        var target = get_target(data,[1,1,1,1,1,1])
+        var target = get_target(data,zhugua)
         console.log('found target: ' + target)
 
         var yuanwen = $("#yuanwen");
@@ -85,7 +85,7 @@ function yaogua(){
         jiegua[0].innerHTML = "<h3>" + target.symbol + target.name + "</h3>" +target.jie;
 
         // biangua
-        var target = get_target(data,[0,0,0,0,0,0])
+        var target = get_target(data,biangua)
         console.log('found biangua: ' + target)
 
         var yuanwen = $("#biangua-yuanwen");
